@@ -11,6 +11,8 @@
 		44337A372193628B00AC2059 /* PaymentKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44337A362193628B00AC2059 /* PaymentKitTests.swift */; };
 		44337A392193628B00AC2059 /* PaymentKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 44337A2B2193628B00AC2059 /* PaymentKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44337A8D2193631700AC2059 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44337A7E2193630200AC2059 /* Logger.framework */; };
+		44337ABE219368AA00AC2059 /* PaymentModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44337ABD219368AA00AC2059 /* PaymentModule.swift */; };
+		44337AC12193693E00AC2059 /* PaymentFunnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44337AC02193693E00AC2059 /* PaymentFunnel.swift */; };
 		49F717E47551927EB5D125FE /* Pods_PaymentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1D6600615FF38DD1112CF1 /* Pods_PaymentKit.framework */; };
 		75DA07704B19569925F1F25C /* Pods_PaymentKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1122DB66F5B199905638EF94 /* Pods_PaymentKitTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		44337A362193628B00AC2059 /* PaymentKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentKitTests.swift; sourceTree = "<group>"; };
 		44337A382193628B00AC2059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44337A782193630100AC2059 /* Logger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Logger.xcodeproj; path = ../../../AppFrameworks/Logger/Logger.xcodeproj; sourceTree = "<group>"; };
+		44337ABD219368AA00AC2059 /* PaymentModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModule.swift; sourceTree = "<group>"; };
+		44337AC02193693E00AC2059 /* PaymentFunnel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFunnel.swift; sourceTree = "<group>"; };
 		603DC3A9D5F371A9CB200F61 /* Pods-PaymentKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentKitTests.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-PaymentKitTests/Pods-PaymentKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD1D6600615FF38DD1112CF1 /* Pods_PaymentKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79EA99CAA646543AF6BDA50 /* Pods-PaymentKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentKitTests.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-PaymentKitTests/Pods-PaymentKitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 			children = (
 				44337A2B2193628B00AC2059 /* PaymentKit.h */,
 				44337A2C2193628B00AC2059 /* Info.plist */,
+				44337ABD219368AA00AC2059 /* PaymentModule.swift */,
+				44337AC02193693E00AC2059 /* PaymentFunnel.swift */,
 			);
 			path = PaymentKit;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 				TargetAttributes = {
 					44337A272193628B00AC2059 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					44337A302193628B00AC2059 = {
 						CreatedOnToolsVersion = 10.1;
@@ -364,6 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44337AC12193693E00AC2059 /* PaymentFunnel.swift in Sources */,
+				44337ABE219368AA00AC2059 /* PaymentModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B259B5A10745ABD802CFF90 /* Pods-PaymentKit.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -533,6 +543,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bunny.PaymentKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -542,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FC79E766026EA400EA76D55 /* Pods-PaymentKit.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -567,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B79EA99CAA646543AF6BDA50 /* Pods-PaymentKitTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PaymentKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -585,6 +598,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 603DC3A9D5F371A9CB200F61 /* Pods-PaymentKitTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PaymentKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
