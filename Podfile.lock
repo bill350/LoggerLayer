@@ -1,0 +1,26 @@
+PODS:
+  - NSLogger/ObjC (1.9.0)
+  - NSLogger/Swift (1.9.0):
+    - NSLogger/ObjC
+  - Stripe (13.2.0)
+  - SwiftLint (0.27.0)
+
+DEPENDENCIES:
+  - NSLogger/Swift (= 1.9.0)
+  - Stripe (= 13.2.0)
+  - SwiftLint (= 0.27.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - NSLogger
+    - Stripe
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  NSLogger: 9f8f5ab017eb34d1a138f4905dc7fb8e9a0e3186
+  Stripe: 2c69e216061d54d9c538204bb4f58bd597ddfc5b
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+
+PODFILE CHECKSUM: 193eaafe7ddbdecf5196613fed6391b4bafabe00
+
+COCOAPODS: 1.5.3

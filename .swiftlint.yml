@@ -1,0 +1,28 @@
+# rule identifiers to exclude from running
+disabled_rules:
+  - trailing_whitespace
+  - todo
+  - opening_brace
+
+# some rules are only opt-in
+opt_in_rules:
+  - empty_count
+  - force_unwrapping
+
+included:
+  - MyModularApp
+  - MyModularAppTests
+  - AppFeatures
+  - AppFrameworks
+  
+# paths to ignore during linting. Takes precedence over `included`.
+excluded:
+  - Carthage
+  - Pods
+  - fastlane
+  - DerivedData
+  - Resources
+
+line_length:
+  warning: 200
+  error: 250

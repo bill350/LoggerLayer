@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:MyModularApp/MyModularApp.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:AppFeatures"
+      name = "AppFeatures">
+      <FileRef
+         location = "group:PaymentKit/PaymentKit.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:AppFrameworks"
+      name = "AppFrameworks">
+      <FileRef
+         location = "group:Logger/Logger.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AppFeatures/PaymentKit/PaymentKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AppFrameworks/Logger/Logger.xcodeproj">
+   </FileRef>
+</Workspace>
